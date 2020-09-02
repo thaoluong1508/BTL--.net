@@ -97,11 +97,11 @@
                                 <div class="row">
                                   <div class="col">
                                       <label>Nhập mật khẩu</label>
-                                      <asp:TextBox required runat="server" type="password" ID="password"  CssClass="form-control" placeholder="Nhập mật khẩu" />
+                                      <asp:TextBox runat="server" type="password" ID="password"  CssClass="form-control" placeholder="Nhập mật khẩu" />
                                   </div>
                                   <div class="col">
                                       <label>Xác nhận mật khẩu</label>
-                                      <asp:TextBox runat="server" required type="password" ID="confirmPass" CssClass="form-control" placeholder="Nhập lại mật khẩu" />
+                                      <asp:TextBox runat="server" type="password" ID="confirmPass" CssClass="form-control" placeholder="Nhập lại mật khẩu" />
                                   </div>
                               </div>
                             </div>
@@ -175,6 +175,9 @@
                             <div id="myBtn">
                                 Đăng ký
                             </div>   
+                        </span>
+                        <span>
+                             <asp:Button ID="Button1" runat="server" Text="Đăng xuất" Visible="False" /> 
                         </span>
                     </div>
                 </div>

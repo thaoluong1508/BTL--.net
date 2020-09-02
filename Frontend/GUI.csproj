@@ -1032,6 +1032,8 @@
     <Content Include="Backend\QuanLyDanhMuc.aspx" />
     <Content Include="Backend\Slides.aspx" />
     <Content Include="Backend\TinTuc.aspx" />
+    <Content Include="Backend\TrangCaNhan.aspx" />
+    <Content Include="Backend\WebForm1.aspx" />
     <Content Include="ChoBanThue.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
@@ -1443,6 +1445,20 @@
     </Compile>
     <Compile Include="Backend\TinTuc.aspx.designer.cs">
       <DependentUpon>TinTuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\TrangCaNhan.aspx.cs">
+      <DependentUpon>TrangCaNhan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\TrangCaNhan.aspx.designer.cs">
+      <DependentUpon>TrangCaNhan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="ChoBanThue.aspx.cs">
       <DependentUpon>ChoBanThue.aspx</DependentUpon>

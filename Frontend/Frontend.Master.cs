@@ -8,7 +8,6 @@ using DTO;
 using BUS;
 using System.Data;
 
-
 namespace Frontend
 {
     public partial class Frontend : System.Web.UI.MasterPage
@@ -41,14 +40,15 @@ namespace Frontend
                 Session["UserId"] = dt.Rows[0]["Id_User"];
                 Session["HoTen"] = dt.Rows[0]["HoTen"];
                 Session["Email"] = dt.Rows[0]["Email"];
-                Response.Redirect("Home.aspx");
+                string sEmail = LoginEmail.Text;
+                string sPass = LoginPassword.Text;
+                Response.Redirect("Backend/TrangCaNhan.aspx?Email=" + sEmail + "&Pass=" + sPass);
             }
             else
             {
                 Response.Write("<script>alert('Sai tài khoản hoặc mật khẩu')</script>");
             }
         }
-
         protected void DangKy_Click(object sender, EventArgs e)
         {
             user.Hoten = username.Text.Trim();
@@ -62,15 +62,15 @@ namespace Frontend
                 Response.Write("<script>alert('Mật khẩu không khớp')</script>");
                 return;
             }
-            if(username.Text.Trim() == "" || email.Text.Trim() == "" || password.Text.Trim() == "" || confirmPass.Text.Trim() == "")
+            if(username.Text.Trim() == "" || email.Text.Trim() == "" || password.Text.Trim() == "" || confirmPass.Text.Trim() == "" || SDT.Text.Trim() == "" || CMND.Text.Trim() == "" || DiaChi.Text.Trim() == "")
             {
-                Response.Write("<script>alert('Vui long điên đầy đủ thông tin')</script>");
+                Response.Write("<script>alert('Vui lòng điền đầy đủ thông tin')</script>");
                 return;
             }
 
             if (avatar.HasFile)
             {
-                string extension = System.IO.Path.GetExtension(avatar.FileName);
+                string extension = System.IO.Path.GetExtension(avatar.FileName); //tra ve duoi file
                 if (extension == ".jpg" || extension == ".png" || extension == ".PNG" || extension == ".JPG")
                 {
                     string path = Server.MapPath("~/uploads/users//");
