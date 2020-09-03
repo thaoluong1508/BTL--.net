@@ -14,11 +14,11 @@ namespace Frontend.Backend
         TinTuc_BUS news = new TinTuc_BUS();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["adEmail"].ToString() == "" && Session["quyen"].ToString() == "" )
+/*            if (Session["adEmail"].ToString() == "" && Session["quyen"].ToString() == "" )
             {
                 Session["error"] = "Bạn hãy đăng nhập";
                 Response.Redirect("AdminLogin.aspx");
-            }
+            }*/
             LoadData();
         }
         public void LoadData()

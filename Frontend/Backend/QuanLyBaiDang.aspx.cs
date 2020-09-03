@@ -12,11 +12,11 @@ namespace Frontend.Backend
         QlBaiDang_BUS obj = new QlBaiDang_BUS();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["adEmail"].ToString() == "" && Session["quyen"].ToString() == "")
+/*            if (Session["adEmail"].ToString() == "" && Session["quyen"].ToString() == "")
             {
                 Session["error"] = "Bạn hãy đăng nhập";
                 Response.Redirect("AdminLogin.aspx");
-            }
+            }*/
             LoadData();
         }
         public void LoadData()

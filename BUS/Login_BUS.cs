@@ -35,5 +35,11 @@ namespace BUS
                 + u.Cmnd + "',N'" + u.Avatar + "')";
             data.ExcuteNon(sql);
         }
+
+        public void updateUser(Users u)
+        {
+            string sql = "update Users set HoTen=N'" + u.Hoten + "', Email='" + u.Email + "', MatKhau='" + u.Matkhau + "', SDT='" + u.Sdt + "',DiaChi = N'" + u.Diachi + "', CMND = '" + u.Cmnd + "', Avatar = '" + u.Avatar + "' where Id_User = '" + u.Id + "'";
+            data.ExcuteNon(sql);
+        }
     }
 }
